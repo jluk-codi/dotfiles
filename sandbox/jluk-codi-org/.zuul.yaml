@@ -1,0 +1,14 @@
+- project:
+    name: jluk-codi-org/zuul-jobs
+    check:
+      jobs:
+        - testjob
+        - noop
+
+- job:
+    name: testjob
+    run: testjob.yaml
+    nodeset:
+      nodes:
+        - name: builder
+          label: centos7
